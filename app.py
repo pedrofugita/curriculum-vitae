@@ -338,7 +338,7 @@ with tab_pesquisa:
 st.divider()
 # ========================================================================
 
-st.header("🎮🎵🎬⚽ Interesses")
+st.header("🎮🎵🎬🎬⚽ Interesses")
 cols = st.columns(4, gap="medium")
 with cols[0]:
     st.image("https://i.pinimg.com/originals/f9/95/d5/f995d53ef1d77a2067c035aad239ad2f.gif", width=300)
