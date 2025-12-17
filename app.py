@@ -125,7 +125,7 @@ with st.sidebar:
     col_esq, col_centro, col_dir = st.columns([1, 10, 1])
     with col_centro:
         try:
-            image = Image.open("foto-perfil.jpg")
+            image = Image.open("foto-perfil.JPG")
             st.image(image)
         except:
             st.write("")
