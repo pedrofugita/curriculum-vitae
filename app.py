@@ -16,10 +16,15 @@ st.markdown("""
 /* Fonte moderna */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-html, body, [class*="css"] {
-    font-family: 'Inter', sans-serif;
+/* Justificar parágrafos e textos gerais */
+.stMarkdown p, .stText {
+    text-align: justify;
 }
 
+/* Caso queira justificar todo o conteúdo do app */
+.main .block-container {
+    text-align: justify;
+}
 /* Fundo geral */
 .stApp {
     background: rgb(0,0,0)
@@ -165,10 +170,10 @@ st.title("Engenheiro Mecânico & Dados ⚙️💻")
 st.subheader("Automação Industrial | Dados & I.A. | Full Stack Development")
 
 st.markdown("""
-Engenheiro Mecânico pela Unesp focado em **automação industrial** e **soluções digitais** voltadas ao aumento de produtividade. 
-Experiência prática na criação de sistemas automatizados, integração de plataformas digitais e aplicação de Inteligência Artificial em produção.
+Engenheiro Mecânico pela Unesp com foco em **automação industrial** e **soluções digitais** voltadas ao aumento de produtividade. 
+Experiência prática na criação de sistemas automatizados, integração de plataformas digitais e aplicação de inteligência artificial em produção.
 
-Atuo na ponte entre a engenharia física e o software, desenvolvendo pipelines de dados (ETL), dashboards analíticos para tomadas de decisões e scripts para eficiência operacional.
+Atuo na ponte entre a engenharia tradicional e a engenharia moderna, desenvolvendo pipelines de dados (ETL), dashboards analíticos para tomadas de decisões e scripts para eficiência operacional.
 """)
 
 st.divider()
@@ -219,9 +224,9 @@ with col4:
 
 st.divider()
 
-st.header("💼 Trajetória Profissional")
+st.header("💼 Experiência Profissional")
 
-with st.expander("✈️ Embraer | Fev 2024 - Dez 2025", expanded=True):
+with st.expander("✈️ Embraer | *2024 - 2025*"):#, expanded=True):
     st.markdown("""
 *Engenharia de Manufatura de Peças Estampadas*
 - Desenvolvimento de softwares para **automação** de processos de produção e engenharia.
@@ -232,14 +237,14 @@ with st.expander("✈️ Embraer | Fev 2024 - Dez 2025", expanded=True):
 - Interface com fornecedores e outras áreas dentro e fora da engenharia.
 """)
 
-with st.expander("🛠️ VFG Engenharia | Engenharia de Projeto (2021)"):
+with st.expander("🛠️ VFG Engenharia | *2021*"):
     st.markdown("""
 *Engenharia de Projeto*
 - Modelagem e simulação 3D (CAD/CAM).
 - Acompanhamento de produção de projeto e entrega de uma perfuratriz rotativa elétrica para perfuração de polos artesianos.
 """)
 
-with st.expander("🎨 FGT Design"):
+with st.expander("🎨 FGT Design  | *2020 - Atual*"):
     st.markdown("""
 *Designer Gráfico*
 - Comunicação visual.
@@ -254,58 +259,85 @@ st.divider()
 # ================== PROJETOS ==================
 st.header("💡 Projetos em Destaque")
 
-tab_proj1, tab_proj2, tab_proj3 = st.tabs(["🤖 Project Jarvis", "📊 Dashboard Industrial", "🏠 Home Lab"])
+tab_proj1, tab_proj2, tab_proj3, tab_proj4, tab_proj5 = st.tabs(["Visão Computacional", "Dashboard Pessoal", "Crypto Agent", "Previsão de Crédito IA", "API"])
 
 with tab_proj1:
-    st.subheader("Assistente Pessoal com IA")
-    col_p1, col_p2 = st.columns([2, 1])
-    with col_p1:
+    st.subheader("Visão Computacional")
+    col_a1, col_a2 = st.columns([2, 1])
+    with col_a1:
         st.write("""
-Sistema de automação de desktop e assistente virtual.
-- **Funcionalidades:** Controle de voz, automação de tarefas repetitivas e busca inteligente.
-- **Tech:** Python, SpeechRecognition, PyAudio e integração com APIs de LLM.
+Detecção de objetos em tempo real utilizando o Ultralytics YOLOv8, desenvolvido como uma Prova de Conceito (PoC) para soluções de monitoramento automatizado em ambientes industriais, de varejo e cidades inteligentes (smart cities).
+
+O sistema processa fluxos de vídeo quadro a quadro (frame a frame) e gera detecções em tempo real com caixas delimitadoras (bounding boxes), classes e pontuações de confiança (confidence scores)."
 """)
-    with col_p2:
-        st.info("Status: Em desenvolvimento contínuo")
+        st.success("Status: Funcional")
+    with col_a2:
+        st.image("https://raw.githubusercontent.com/pedrofugita/computer-vision-yolo/refs/heads/main/media/video_planta.png")
 
 with tab_proj2:
-    st.subheader("Dashboard de Gestão com Django")
-    col_d1, col_d2 = st.columns([2, 1])
-    with col_d1:
+    st.subheader("Dashboard Pessoal")
+    col_b1, col_b2 = st.columns([2, 1])
+    with col_b1:
         st.write("""
-Aplicação Full Stack para visualização de dados industriais em tempo real.
-- **Funcionalidades:** Login seguro, gráficos interativos (Plotly) e relatórios automatizados.
-- **Tech:** Django, Bootstrap, SQL e Pandas para tratamento de dados.
+Um painel de controle pessoal e interativo desenvolvido com Django para monitoramento de hardware em tempo real, controle de áudio, atalhos tarefas e visualização de dados financeiros e climáticos.
 """)
-    with col_d2:
+    with col_b2:
         st.success("Status: Funcional")
 
 with tab_proj3:
-    st.subheader("Infraestrutura & IoT")
-    st.write("""
+    st.subheader("Crypto Agent")
+    col_c1, col_c2 = st.columns([2, 1])
+    with col_c1:
+        st.write("""
 Setup pessoal focado em experimentação e servidores caseiros.
 - **Home Assistant:** Automação residencial integrada.
 - **Hardware:** Montagem e manutenção de PCs, configuração de redes locais e servidores de mídia.
 """)
+    with col_c2:
+        st.info("Status: Em progresso")
 
+with tab_proj4:
+    st.subheader("Previsão de Crédito IA")
+    col_d1, col_d2 = st.columns([2, 1])
+    with col_d1:
+        st.write("""
+Setup pessoal focado em experimentação e servidores caseiros.
+- **Home Assistant:** Automação residencial integrada.
+- **Hardware:** Montagem e manutenção de PCs, configuração de redes locais e servidores de mídia.
+""")
+with col_d2:
+    st.info("Status: Em progresso")
+    
+with tab_proj5:
+    st.subheader("API")
+    col_e1, col_e2 = st.columns([2, 1])
+    with col_e1:
+        st.write("""
+Setup pessoal focado em experimentação e servidores caseiros.
+- **Home Assistant:** Automação residencial integrada.
+- **Hardware:** Montagem e manutenção de PCs, configuração de redes locais e servidores de mídia.
+""")
+with col_e2:
+    st.info("Status: Em progresso")
+    
 st.divider()
 
 # ================== FORMAÇÃO ACADÊMICA (AGORA EM ABAS) ==================
-st.header("🎓 Formação Acadêmica & Extracurricular")
+st.header("🎓 Formação Acadêmica")
 
 # Criação das 4 abas solicitadas
-tab_resumo, tab_sae, tab_ca, tab_pesquisa = st.tabs(["Resumo", "Formula SAE", "Centro Acadêmico", "Pesquisa"])
+tab_resumo, tab_sae, tab_ca, tab_pesquisa = st.tabs(["Graduação", "Formula SAE", "Centro Acadêmico", "Pesquisa"])
 
 with tab_resumo:
     st.subheader("Engenharia Mecânica")
     st.markdown("**UNESP** - Universidade Estadual Paulista 'Júlio de Mesquita Filho'")
-    st.caption("📍 Campus Ilha Solteira")
-    st.info("Bacharelado com ênfase em projetos mecânicos, automação e desenvolvimento tecnológico.")
+    st.caption("📍 Ilha Solteira")
+    st.write("Bacharelado com sólida formação técnica e experimental desenvolvida em um dos maiores complexos laboratoriais do país. Competências práticas avançadas em Ciências Térmicas (refrigeração, escoamento bifásico e motores), Mecânica dos Sólidos (vibrações, acústica e controle de sistemas inteligentes) e Processos de Fabricação (usinagem CNC, metrologia dimensional, metalografia e conformação plástica). Experiência direta com instrumentação industrial, sistemas CAD/CAM e ensaios mecânicos, além de contato com pesquisas de ponta voltadas à manutenção preditiva, automação e programação. Essa trajetória proporcionou uma visão sistêmica da engenharia, desde a concepção e projeto auxiliado por computador até a manufatura integrada e o controle de estruturas inteligentes.")
 
 with tab_sae:
     col_sae1, col_sae2 = st.columns([3, 1])
     with col_sae1:
-        st.subheader("🏎️ Unesp Fênix Racing (Formula SAE)")
+        st.subheader("🏎️ Fênix Racing Formula SAE")
         st.write("**Área de Transmissão**")
         st.write("""
         Participação no projeto e manufatura de um protótipo veicular tipo Fórmula.
@@ -338,7 +370,7 @@ with tab_pesquisa:
 st.divider()
 # ========================================================================
 
-st.header("🎮🎵🎬🎬⚽ Interesses")
+st.header("🎮🎵🎬⚽ Interesses")
 cols = st.columns(4, gap="medium")
 with cols[0]:
     st.image("https://i.pinimg.com/originals/f9/95/d5/f995d53ef1d77a2067c035aad239ad2f.gif", width=300)
