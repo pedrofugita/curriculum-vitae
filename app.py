@@ -4,7 +4,7 @@ from datetime import date
 
 # ================== CONFIGURAÇÃO DA PÁGINA ==================
 st.set_page_config(
-    page_title="Currículo Profissional - Pedro H. Fugita Bóis",
+    page_title="Pedro Fugita - Currículo Profissional",
     page_icon="✈️",
     layout="wide"
 )
@@ -236,6 +236,7 @@ with st.expander("✈️ Embraer | *2024 - 2025*"):#, expanded=True):
 - Melhoria de *projetos* de equipamentos industriais.
 - Interface com fornecedores e outras áreas dentro e fora da engenharia.
 """)
+    st.image("embraer.jpg")
 
 with st.expander("🛠️ VFG Engenharia | *2021*"):
     st.markdown("""
@@ -259,7 +260,7 @@ st.divider()
 # ================== PROJETOS ==================
 st.header("💡 Projetos em Destaque")
 
-tab_proj1, tab_proj2, tab_proj3, tab_proj4, tab_proj5 = st.tabs(["Visão Computacional", "Dashboard Pessoal", "Crypto Agent", "Previsão de Crédito IA", "API"])
+tab_proj1, tab_proj2, tab_proj3, tab_proj4, tab_proj5, tab_proj6 = st.tabs(["Visão Computacional", "Dashboard Pessoal", "Crypto Agent", "Previsão de Crédito IA", "API", "FGT Design"])
 
 with tab_proj1:
     st.subheader("Visão Computacional")
@@ -289,9 +290,7 @@ with tab_proj3:
     col_c1, col_c2 = st.columns([2, 1])
     with col_c1:
         st.write("""
-Setup pessoal focado em experimentação e servidores caseiros.
-- **Home Assistant:** Automação residencial integrada.
-- **Hardware:** Montagem e manutenção de PCs, configuração de redes locais e servidores de mídia.
+
 """)
     with col_c2:
         st.info("Status: Em progresso")
@@ -301,9 +300,7 @@ with tab_proj4:
     col_d1, col_d2 = st.columns([2, 1])
     with col_d1:
         st.write("""
-Setup pessoal focado em experimentação e servidores caseiros.
-- **Home Assistant:** Automação residencial integrada.
-- **Hardware:** Montagem e manutenção de PCs, configuração de redes locais e servidores de mídia.
+
 """)
 with col_d2:
     st.info("Status: Em progresso")
@@ -313,19 +310,28 @@ with tab_proj5:
     col_e1, col_e2 = st.columns([2, 1])
     with col_e1:
         st.write("""
-Setup pessoal focado em experimentação e servidores caseiros.
-- **Home Assistant:** Automação residencial integrada.
-- **Hardware:** Montagem e manutenção de PCs, configuração de redes locais e servidores de mídia.
+
 """)
 with col_e2:
     st.info("Status: Em progresso")
+
+with tab_proj6:
+    st.subheader("FGT Design")
+    col_f1, col_f2 = st.columns([2, 1])
+    with col_f1:
+        st.write("""
+
+""")
+with col_f2:
+    st.info("Status: Em progresso")
+    
+st.divider()
     
 st.divider()
 
 # ================== FORMAÇÃO ACADÊMICA (AGORA EM ABAS) ==================
 st.header("🎓 Formação Acadêmica")
 
-# Criação das 4 abas solicitadas
 tab_resumo, tab_sae, tab_ca, tab_pesquisa = st.tabs(["Graduação", "Formula SAE", "Centro Acadêmico", "Pesquisa"])
 
 with tab_resumo:
