@@ -227,7 +227,9 @@ st.divider()
 st.header("💼 Experiência Profissional")
 
 with st.expander("✈️ Embraer | *2024 - 2025*"):#, expanded=True):
-    st.markdown("""
+    col1, col2 = st.columns([1,4])
+    with col1:
+        st.markdown("""
 *Engenharia de Manufatura de Peças Estampadas*
 - Desenvolvimento de softwares para **automação** de processos de produção e engenharia.
 - Aplicação de **Inteligência Artificial** em chatbots e visão computacional para ganho de eficiência e qualidade.
@@ -236,7 +238,8 @@ with st.expander("✈️ Embraer | *2024 - 2025*"):#, expanded=True):
 - Melhoria de *projetos* de equipamentos industriais.
 - Interface com fornecedores e outras áreas dentro e fora da engenharia.
 """)
-    st.image("embraer.jpg")
+    with col2:
+        st.image("embraer.jpg")
 
 with st.expander("🛠️ VFG Engenharia | *2021*"):
     st.markdown("""
