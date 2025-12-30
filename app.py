@@ -354,6 +354,7 @@ with tab_resumo:
     st.markdown("**UNESP** - Universidade Estadual Paulista 'Júlio de Mesquita Filho'")
     st.caption("📍 Ilha Solteira")
     st.write("Bacharelado com sólida formação técnica e experimental desenvolvida em um dos maiores complexos laboratoriais do país. Competências práticas avançadas em Ciências Térmicas (refrigeração, escoamento bifásico e motores), Mecânica dos Sólidos (vibrações, acústica e controle de sistemas inteligentes) e Processos de Fabricação (usinagem CNC, metrologia dimensional, metalografia e conformação plástica). Experiência direta com instrumentação industrial, sistemas CAD/CAM e ensaios mecânicos, além de contato com pesquisas de ponta voltadas à manutenção preditiva, automação e programação. Essa trajetória proporcionou uma visão sistêmica da engenharia, desde a concepção e projeto auxiliado por computador até a manufatura integrada e o controle de estruturas inteligentes.")
+    st.image("unesp.png", width=300)
 
 with tab_sae:
     col_sae1, col_sae2 = st.columns([3, 1])
