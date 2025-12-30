@@ -226,8 +226,8 @@ st.divider()
 
 st.header("💼 Experiência Profissional")
 
-with st.expander("✈️ Embraer | *2024 - 2025*"):#, expanded=True):
-    col1, col2 = st.columns([1,4])
+with st.expander("✈️ Embraer | *2024 - 2025*", expanded=True):
+    col1, col2 = st.columns([3,1])
     with col1:
         st.markdown("""
 *Engenharia de Manufatura de Peças Estampadas*
@@ -242,21 +242,33 @@ with st.expander("✈️ Embraer | *2024 - 2025*"):#, expanded=True):
         st.image("embraer.jpg")
 
 with st.expander("🛠️ VFG Engenharia | *2021*"):
-    st.markdown("""
+    col1, col2 = st.columns([4,1])
+    with col1:
+        st.markdown("""
 *Engenharia de Projeto*
 - Modelagem e simulação 3D (CAD/CAM).
 - Acompanhamento de produção de projeto e entrega de uma perfuratriz rotativa elétrica para perfuração de polos artesianos.
 """)
+    with col2:
+        st.image("vfg.png", width=150)
 
 with st.expander("🎨 FGT Design  | *2020 - Atual*"):
-    st.markdown("""
+    col1, col2 = st.columns([3,1])
+    with col1:
+        st.markdown("""
 *Designer Gráfico*
-- Comunicação visual.
-- Gestão de projetos.
-- Visão de produto.
-- Interface com o público.
+- Comunicação visual
+- Gestão de projetos
+- Visão de produto
+- Interface com o público
 - Empreendedorismo
-""")
+                    
+<a href="https://www.behance.net/pedrofugita2" target="_blank" style="text-decoration:none;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Behance_logo.svg/1024px-Behance_logo.svg.png?20180331154838" width="100" style="filter: invert(1);">
+</a>
+""", unsafe_allow_html=True)
+    with col2:
+        st.image("fgt.png", width=550)
 
 st.divider()
 
