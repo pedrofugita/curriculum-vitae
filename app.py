@@ -329,6 +329,9 @@ Este projeto é uma Prova de Conceito (POC) de um Agente de IA voltado ao mercad
 
 O sistema realiza reconhecimento de intenção em linguagem natural para consultar ativos (ex: criptomoedas), calcula indicadores técnicos como RSI em tempo real e gera análises de sentimento de mercado utilizando LLM. Além disso, incorpora mecanismos de compliance, incluindo aviso legal automático e respostas fundamentadas em dados para reduzir riscos de interpretações incorretas.
 """)
+        st.markdown(
+        "[🔗 Acesse o repositório no GitHub](https://github.com/pedrofugita/crypto-agent)"
+    )
     with col_c2:
         st.image("agenteIA.png")
 
@@ -353,10 +356,15 @@ with tab_proj6:
     col_e1, col_e2 = st.columns([2, 1])
     with col_e1:
         st.write("""
+Este projeto consiste em um microserviço de conversão monetária desenvolvido com FastAPI seguindo arquitetura Cloud-Native. A solução consome cotações em tempo real de uma API principal e, em caso de falha ou indisponibilidade da moeda consultada, ativa automaticamente um sistema de fallback para uma API internacional, garantindo alta disponibilidade e continuidade do serviço.
 
+A aplicação é Full Stack, com backend em Python (FastAPI) e frontend em HTML/CSS/JS, oferecendo suporte a múltiplas moedas e criptomoedas. Conta ainda com estratégia robusta de tratamento de erros, documentação automática via Swagger UI e containerização com Docker, estando pronta para deploy em ambientes modernos.
 """)
+        st.markdown(
+        "[🔗 Acesse o repositório no GitHub](https://github.com/pedrofugita/conversor-cambio-api-frontend)"
+    )
 with col_e2:
-    st.info("Status: Em progresso")
+        st.image("api.png")
 
 with tab_proj7:
     st.subheader("FGT Design")
