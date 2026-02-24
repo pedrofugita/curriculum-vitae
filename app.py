@@ -325,10 +325,12 @@ with tab_proj4:
     col_c1, col_c2 = st.columns([2, 1])
     with col_c1:
         st.write("""
+Este projeto é uma Prova de Conceito (POC) de um Agente de IA voltado ao mercado financeiro, desenvolvido como case prático de portfólio. A solução combina um chatbot interativo com um dashboard de dados em tempo real, funcionando como um “Analista Júnior” digital que integra dados quantitativos de mercado com a capacidade interpretativa de modelos avançados de linguagem.
 
+O sistema realiza reconhecimento de intenção em linguagem natural para consultar ativos (ex: criptomoedas), calcula indicadores técnicos como RSI em tempo real e gera análises de sentimento de mercado utilizando LLM. Além disso, incorpora mecanismos de compliance, incluindo aviso legal automático e respostas fundamentadas em dados para reduzir riscos de interpretações incorretas.
 """)
     with col_c2:
-        st.info("Status: Em progresso")
+        st.image("agenteIA.png")
 
 with tab_proj5:
     st.subheader("Previsão de Crédito IA")
