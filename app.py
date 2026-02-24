@@ -256,7 +256,7 @@ with st.expander("🎨 FGT Design  | *2020 - Atual*"):
     col1, col2 = st.columns([3,1])
     with col1:
         st.markdown("""
-*Designer Gráfico*
+*Designer Gráfico Freelancer*
 - Comunicação visual
 - Gestão de projetos
 - Visão de produto
@@ -275,7 +275,7 @@ st.divider()
 # ================== PROJETOS ==================
 st.header("💡 Projetos em Destaque")
 
-tab_proj1, tab_proj2, tab_proj3, tab_proj4, tab_proj5, tab_proj6 = st.tabs(["Visão Computacional", "Dashboard Pessoal", "Crypto Agent", "Previsão de Crédito IA", "API", "FGT Design"])
+tab_proj1, tab_proj2, tab_proj3, tab_proj4, tab_proj5, tab_proj6, tab_proj7 = st.tabs(["Visão Computacional", "I.A. no Uso de EPIs", "Dashboard Pessoal", "Crypto Agent", "Previsão de Crédito IA", "API", "FGT Design"])
 
 with tab_proj1:
     st.subheader("Visão Computacional")
@@ -284,13 +284,32 @@ with tab_proj1:
         st.write("""
 Detecção de objetos em tempo real utilizando o Ultralytics YOLOv8, desenvolvido como uma Prova de Conceito (PoC) para soluções de monitoramento automatizado em ambientes industriais, de varejo e cidades inteligentes (smart cities).
 
-O sistema processa fluxos de vídeo quadro a quadro (frame a frame) e gera detecções em tempo real com caixas delimitadoras (bounding boxes), classes e pontuações de confiança (confidence scores)."
+O sistema processa fluxos de vídeo frame a frame e gera detecções em tempo real com caixas delimitadoras, classes e pontuações de confiança, plotando os resultados em uma planta do local de trabalho, permitindo análises de deslocamento dos trabalhadores."
 """)
-        st.success("Status: Funcional")
+    st.markdown(
+        "[🔗 Acesse o repositório no GitHub](https://github.com/pedrofugita/computer-vision-yolo)"
+    )
+    st.success("Status: Funcional")
     with col_a2:
         st.image("https://raw.githubusercontent.com/pedrofugita/computer-vision-yolo/refs/heads/main/media/video_planta.png")
 
 with tab_proj2:
+    st.subheader("I.A. no Uso de EPIs")
+    col_a1, col_a2 = st.columns([2, 1])
+    with col_a1:
+        st.write("""
+Projeto foi realizado para Trabalho de Graduação com pesquisas na Universidade Estadual Paulista "Júlio de Mesquita Filho" e trata-se do treinamento de um modelo de visão computacional (YOLO) para reconhecimento de Equipamentos de Proteção Individual (EPIs) em ambientes industriais e aplicação do modelo treinado em um software desenvolvido para aplicações de baixo custo.                  
+
+O sistema processa fluxos de vídeo gera detecções em tempo real do uso ou não uso de EPIs por parte dos trabalhadores emitindo alertas e relatórios automáticos caso sejam detectadas não conformidades de segurança."
+""")
+    # st.markdown(
+    #     "[🔗 Acesse o repositório no GitHub](https://github.com/pedrofugita/computer-vision-yolo)"
+    # )
+    st.success("Status: Funcional")
+    with col_a2:
+        st.image("app0.png")
+
+with tab_proj3:
     st.subheader("Dashboard Pessoal")
     col_b1, col_b2 = st.columns([2, 1])
     with col_b1:
@@ -300,7 +319,7 @@ Um painel de controle pessoal e interativo desenvolvido com Django para monitora
     with col_b2:
         st.success("Status: Funcional")
 
-with tab_proj3:
+with tab_proj4:
     st.subheader("Crypto Agent")
     col_c1, col_c2 = st.columns([2, 1])
     with col_c1:
@@ -310,7 +329,7 @@ with tab_proj3:
     with col_c2:
         st.info("Status: Em progresso")
 
-with tab_proj4:
+with tab_proj5:
     st.subheader("Previsão de Crédito IA")
     col_d1, col_d2 = st.columns([2, 1])
     with col_d1:
@@ -320,7 +339,7 @@ with tab_proj4:
 with col_d2:
     st.info("Status: Em progresso")
     
-with tab_proj5:
+with tab_proj6:
     st.subheader("API")
     col_e1, col_e2 = st.columns([2, 1])
     with col_e1:
@@ -330,7 +349,7 @@ with tab_proj5:
 with col_e2:
     st.info("Status: Em progresso")
 
-with tab_proj6:
+with tab_proj7:
     st.subheader("FGT Design")
     col_f1, col_f2 = st.columns([2, 1])
     with col_f1:
@@ -344,7 +363,7 @@ st.divider()
     
 st.divider()
 
-# ================== FORMAÇÃO ACADÊMICA (AGORA EM ABAS) ==================
+# ================== FORMAÇÃO ACADÊMICA ==================
 st.header("🎓 Formação Acadêmica")
 
 tab_resumo, tab_sae, tab_ca, tab_pesquisa = st.tabs(["Graduação", "Formula SAE", "Centro Acadêmico", "Pesquisa"])
