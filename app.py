@@ -275,7 +275,7 @@ st.divider()
 # ================== PROJETOS ==================
 st.header("💡 Projetos em Destaque")
 
-tab_proj1, tab_proj2, tab_proj3, tab_proj4, tab_proj5, tab_proj6, tab_proj7 = st.tabs(["Visão Computacional", "I.A. no Uso de EPIs", "Dashboard Pessoal", "Crypto Agent", "Previsão de Crédito IA", "API", "FGT Design"])
+tab_proj1, tab_proj2, tab_proj3, tab_proj4, tab_proj5, tab_proj6, tab_proj7 = st.tabs(["Visão Computacional", "I.A. no Uso de EPIs", "Dashboard Pessoal", "Crypto Agent", "Previsão de Crédito IA", "API", "Game"])
 
 with tab_proj1:
     st.subheader("Visão Computacional")
