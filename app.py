@@ -367,14 +367,14 @@ with col_e2:
         st.image("api.png")
 
 with tab_proj7:
-    st.subheader("FGT Design")
+    st.subheader("Game")
     col_f1, col_f2 = st.columns([2, 1])
     with col_f1:
         st.write("""
-
+Desenvolvimento de um jogo de plataforma 2D em Python utilizando a biblioteca Pygame como forma de aprofundar meus conhecimentos em programação orientada a objetos, estrutura de jogos e manipulação gráfica. O projeto conta com personagem controlável, sistema de movimentação e colisão com obstáculos, física básica e organização modular do código, permitindo compreender conceitos como game loop, detecção de eventos e renderização em tempo real.
 """)
 with col_f2:
-    st.info("Status: Em progresso")
+        st.image("game.png")
     
 st.divider()
     
