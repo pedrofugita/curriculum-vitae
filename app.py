@@ -335,10 +335,16 @@ with tab_proj5:
     col_d1, col_d2 = st.columns([2, 1])
     with col_d1:
         st.write("""
+Este projeto simula o ambiente de dados de uma instituição financeira com foco em Análise de Risco de Crédito e Segmentação de Clientes, utilizando técnicas de Ciência de Dados e Machine Learning. Foi desenvolvido um gerador de dados sintéticos capaz de criar 50.000 clientes com regras de negócio realistas, incluindo correlações entre escolaridade, renda e limite de crédito, além de um pipeline completo de pré-processamento com tratamento de variáveis categóricas.
 
-""")
+Para concessão de crédito, foi treinado um modelo de Random Forest capaz de prever inadimplência com alta precisão e análise de importância das variáveis. Já na área de marketing, foi aplicada clusterização com K-Means para identificar perfis de clientes (Iniciantes, Consolidados e Prime). O projeto também inclui um simulador interativo que permite testar pedidos de empréstimo em tempo real, retornando a decisão automatizada com probabilidades calculadas.
+    """)
+        st.markdown(
+        "[🔗 Acesse o repositório no GitHub](https://github.com/pedrofugita/IA-analise-credito)"
+    )
 with col_d2:
-    st.info("Status: Em progresso")
+        st.image("analise-credito.png")
+
     
 with tab_proj6:
     st.subheader("API")
