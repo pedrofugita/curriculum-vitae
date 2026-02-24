@@ -286,10 +286,9 @@ Detecção de objetos em tempo real utilizando o Ultralytics YOLOv8, desenvolvid
 
 O sistema processa fluxos de vídeo frame a frame e gera detecções em tempo real com caixas delimitadoras, classes e pontuações de confiança, plotando os resultados em uma planta do local de trabalho, permitindo análises de deslocamento dos trabalhadores."
 """)
-    st.markdown(
+        st.markdown(
         "[🔗 Acesse o repositório no GitHub](https://github.com/pedrofugita/computer-vision-yolo)"
     )
-    st.success("Status: Funcional")
     with col_a2:
         st.image("https://raw.githubusercontent.com/pedrofugita/computer-vision-yolo/refs/heads/main/media/video_planta.png")
 
@@ -305,7 +304,6 @@ O sistema processa fluxos de vídeo gera detecções em tempo real do uso ou nã
     # st.markdown(
     #     "[🔗 Acesse o repositório no GitHub](https://github.com/pedrofugita/computer-vision-yolo)"
     # )
-    st.success("Status: Funcional")
     with col_a2:
         st.image("app0.png")
 
@@ -314,10 +312,13 @@ with tab_proj3:
     col_b1, col_b2 = st.columns([2, 1])
     with col_b1:
         st.write("""
-Um painel de controle pessoal e interativo desenvolvido com Django para monitoramento de hardware em tempo real, controle de áudio, atalhos tarefas e visualização de dados financeiros e climáticos.
+Um painel de controle pessoal e interativo desenvolvido com Django para monitoramento de hardware em tempo real, controle de áudio, atalhos, tarefas e visualização de dados financeiros e climáticos.
 """)
+        st.markdown(
+        "[🔗 Acesse o repositório no GitHub](https://github.com/pedrofugita/dashboard-pessoal)"
+    )
     with col_b2:
-        st.success("Status: Funcional")
+        st.image("dashboard.png")
 
 with tab_proj4:
     st.subheader("Crypto Agent")
