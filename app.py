@@ -213,8 +213,8 @@ col1, col2, col3, col4 = st.columns(4)
 with col1:
     st.markdown("#### 💻 Linguagens")
     st.markdown("""
-- **Python** (Avançado)
-- **SQL** (PostgreSQL)
+- **Python**
+- **SQL**
 - **C++ / Octave**
 - **LaTeX**
 - **HTML/CSS/JS**
@@ -223,11 +223,11 @@ with col1:
 with col2:
     st.markdown("#### 🧠 IA & Dados")
     st.markdown("""
-- **Visão Comp. (YOLO/OpenCV)**
+- **Visão Computacional (YOLO/OpenCV)**
 - **Pandas & NumPy**
 - **ETL Pipelines**
 - **Power BI & Plotly**
-- **LLMs (Gemini/OpenAI)**
+- **LLMs**
 """)
 
 with col3:
