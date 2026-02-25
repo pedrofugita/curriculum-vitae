@@ -387,43 +387,51 @@ tab_resumo, tab_sae, tab_ca, tab_pesquisa = st.tabs(["Graduação", "Formula SAE
 
 with tab_resumo:
     st.subheader("Engenharia Mecânica")
-    st.markdown("**UNESP** - Universidade Estadual Paulista 'Júlio de Mesquita Filho'")
-    st.caption("📍 Ilha Solteira")
-    st.write("Bacharelado com sólida formação técnica e experimental desenvolvida em um dos maiores complexos laboratoriais do país. Competências práticas avançadas em Ciências Térmicas (refrigeração, escoamento bifásico e motores), Mecânica dos Sólidos (vibrações, acústica e controle de sistemas inteligentes) e Processos de Fabricação (usinagem CNC, metrologia dimensional, metalografia e conformação plástica). Experiência direta com instrumentação industrial, sistemas CAD/CAM e ensaios mecânicos, além de contato com pesquisas de ponta voltadas à manutenção preditiva, automação e programação. Essa trajetória proporcionou uma visão sistêmica da engenharia, desde a concepção e projeto auxiliado por computador até a manufatura integrada e o controle de estruturas inteligentes.")
-    st.image("unesp.png", width=300)
+    tab_resumo1, tab_resumo2 = st.columns([2, 1])
+    with tab_resumo1:
+        st.markdown("**UNESP - Universidade Estadual Paulista 'Júlio de Mesquita Filho' - Ilha Solteira (FEIS)**")
+        st.write("""
+                Bacharelado com sólida formação técnica e experimental desenvolvida em um dos maiores complexos laboratoriais do país. Competências práticas avançadas em Ciências Térmicas (refrigeração, escoamento bifásico e motores), Mecânica dos Sólidos (vibrações, acústica e controle de sistemas inteligentes) e Processos de Fabricação (usinagem CNC, metrologia dimensional, metalografia e conformação plástica). Experiência direta com instrumentação industrial, sistemas CAD/CAM e ensaios mecânicos, além de contato com pesquisas de ponta voltadas à manutenção preditiva, automação e programação. Essa trajetória proporcionou uma visão sistêmica da engenharia, desde a concepção e projeto auxiliado por computador até a manufatura integrada e o controle de estruturas inteligentes.
+                """)
+    with tab_resumo2:
+        st.image("unesp.png")
 
 with tab_sae:
-    col_sae1, col_sae2 = st.columns([3, 1])
+    st.subheader("Fênix Racing Formula SAE")
+    col_sae1, col_sae2 = st.columns([2, 1])
     with col_sae1:
-        st.subheader("🏎️ Fênix Racing Formula SAE")
-        st.write("**Área de Transmissão**")
+        st.write("**Área de Transmissão Veicular**")
         st.write("""
-        Participação no projeto e manufatura de um protótipo veicular tipo Fórmula.
+        Participação no projeto e manufatura de um protótipo veicular tipo Formula.
         - Desenvolvimento e cálculo estrutural do sistema de transmissão.
         - Utilização de softwares CAD/CAE para otimização de performance.
         - Trabalho em equipe multidisciplinar sob prazos rígidos de competição.
         """)
     with col_sae2:
-        st.write("") # Espaço para foto se quiser adicionar futuramente
+        st.image("formula.png")
 
 with tab_ca:
-    st.subheader("🏛️ Centro Acadêmico 'Ozires Silva'")
-    st.write("**Liderança Estudantil**")
+    st.subheader("Centro Acadêmico 'Ozires Silva'")
+    col_ca1, col_ca2 = st.columns([2, 1])
+    with col_ca1:
+        st.write("**Presidente:**")
+        st.write("Representação dos estudantes, gestão de conflitos e organização institucional.")
     
-    st.markdown("🔹 **Presidente**")
-    st.caption("Representação dos estudantes, gestão de conflitos e organização institucional.")
-    
-    st.markdown("🔹 **Diretor de Marketing**")
-    st.caption("Coordenação de campanhas de engajamento e comunicação visual.")
+        st.write("**Diretor de Marketing:**")
+        st.write("Coordenação de campanhas de engajamento, comunicação visual e vendas.")
+    with col_ca2:
+        st.image("formula.png")
 
 with tab_pesquisa:
-    st.subheader("🔬 Pesquisa & Desenvolvimento")
-    st.markdown("**Aplicações de IA na Engenharia**")
-    st.write("""
-    Foco acadêmico na intersecção entre Engenharia Mecânica e Ciência da Computação.
-    - **Visão Computacional:** Estudos aplicados utilizando YOLO e OpenCV para detecção de objetos em ambientes industriais.
-    - **Automação:** Desenvolvimento de scripts para otimização de processos de manufatura.
-    """)
+    st.subheader("Pesquisa & Desenvolvimento")
+    col_pesquisa1, col_pesquisa2 = st.columns([2, 1])
+    with col_pesquisa1:
+        st.markdown("**Aplicações de IA na Engenharia de Segurança**")
+        st.write("""
+        Foco acadêmico na intersecção entre Engenharia Mecânica e Ciência da Computação com ênfase em estudos aplicados utilizando visão computacional para detecção de Equipamentos de Proteção Individual em ambientes industriais e em desenvolvimento de scripts para otimização de processos de manufatura e segurança. A pesquisa envolveu coleta e análise de dados, treinamento de modelos de machine learning e desenvolvimento de protótipos de software para aplicações práticas, resultando em uma compreensão aprofundada das potencialidades e desafios da integração entre engenharia tradicional e tecnologias digitais emergentes.
+        """)
+    with col_pesquisa2:
+        st.image("formula.png")
 
 st.divider()
 # ========================================================================
@@ -443,4 +451,4 @@ with cols[2]:
     st.image("https://i.pinimg.com/originals/f4/75/e1/f475e17d2d74c96d45ac92b14de16da5.gif", width=180)
 
 st.markdown("---")
-st.caption("Desenvolvido por Pedro Fugita | Powered by Streamlit & Python 🐍")
+st.caption("Desenvolvido por Pedro Fugita | Powered by Streamlit & Python")
