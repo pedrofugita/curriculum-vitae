@@ -7,6 +7,7 @@ st.set_page_config(
     page_title="Pedro Fugita - Currículo Profissional",
     page_icon="✈️",
     layout="wide"
+    initial_sidebar_state="expanded"
 )
 
 # ================== CSS GLOBAL ==================
@@ -119,6 +120,19 @@ section[data-testid="stVerticalBlock"] {
 button[data-baseweb="tab"] {
     font-size: 16px;
     font-weight: 600;
+}
+            
+/* Estilo exclusivo para a seção de interesses */
+.gif-container [data-testid="column"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gif-container [data-testid="stImage"] img {
+    object-fit: contain;
+    height: 150px !important;
+    width: auto !important;
 }
 
 </style>
@@ -378,7 +392,7 @@ A aplicação é Full Stack, com backend em Python (FastAPI) e frontend em HTML/
         "[🔗 Acesse o repositório no GitHub](https://github.com/pedrofugita/conversor-cambio-api-frontend)"
     )
 with col_e2:
-        st.image("api.png")
+        st.image("api.png", width=265)
 
 with tab_proj7:
     st.subheader("Game")
@@ -388,10 +402,8 @@ with tab_proj7:
 Desenvolvimento de um jogo de plataforma 2D em Python utilizando a biblioteca Pygame como forma de aprofundar meus conhecimentos em programação orientada a objetos, estrutura de jogos e manipulação gráfica. O projeto conta com personagem controlável, sistema de movimentação e colisão com obstáculos, física básica e organização modular do código, permitindo compreender conceitos como game loop, detecção de eventos e renderização em tempo real.
 """)
 with col_f2:
-        st.image("game.png")
-    
-st.divider()
-    
+        st.image("game.png", width=265)
+
 st.divider()
 
 # ================== FORMAÇÃO ACADÊMICA ==================
@@ -434,7 +446,7 @@ with tab_ca:
         st.write("**Diretor de Marketing:**")
         st.write("Coordenação de campanhas de engajamento, comunicação visual e vendas.")
     with col_ca2:
-        st.image("formula.png")
+        st.image("ca.jpeg")
 
 with tab_pesquisa:
     st.subheader("Pesquisa & Desenvolvimento")
@@ -445,24 +457,30 @@ with tab_pesquisa:
         Foco acadêmico na intersecção entre Engenharia Mecânica e Ciência da Computação com ênfase em estudos aplicados utilizando visão computacional para detecção de Equipamentos de Proteção Individual em ambientes industriais e em desenvolvimento de scripts para otimização de processos de manufatura e segurança. A pesquisa envolveu coleta e análise de dados, treinamento de modelos de machine learning e desenvolvimento de protótipos de software para aplicações práticas, resultando em uma compreensão aprofundada das potencialidades e desafios da integração entre engenharia tradicional e tecnologias digitais emergentes.
         """)
     with col_pesquisa2:
-        st.image("formula.png")
+        st.image("tcc.jpg", width=250)
 
 st.divider()
 # ========================================================================
 
 st.header("🎮🎵🎬⚽ Interesses")
 cols = st.columns(4, gap="medium")
-with cols[0]:
-    st.image("https://i.pinimg.com/originals/f9/95/d5/f995d53ef1d77a2067c035aad239ad2f.gif", width=300)
+gifs = [
+    "https://i.pinimg.com/originals/f9/95/d5/f995d53ef1d77a2067c035aad239ad2f.gif",
+    "https://i.pinimg.com/originals/38/eb/9e/38eb9ef67fe14e68cc516fd025f8d559.gif",
+    "https://i.pinimg.com/originals/f4/75/e1/f475e17d2d74c96d45ac92b14de16da5.gif",
+    "https://media.tenor.com/3aCImrMYRX4AAAAM/corinthians.gif"
+]
 
-with cols[1]:
-    st.image("https://i.pinimg.com/originals/38/eb/9e/38eb9ef67fe14e68cc516fd025f8d559.gif", width=300)
-
-with cols[3]:
-    st.image("https://media.tenor.com/3aCImrMYRX4AAAAM/corinthians.gif", width=120)
-
-with cols[2]:
-    st.image("https://i.pinimg.com/originals/f4/75/e1/f475e17d2d74c96d45ac92b14de16da5.gif", width=180)
+for i, gif_url in enumerate(gifs):
+    with cols[i]:
+        st.markdown(
+            f"""
+            <div style="display: flex; justify-content: center; align-items: center; height: 150px;">
+                <img src="{gif_url}" style="height: 100%; width: auto; object-fit: contain; border-radius: 10px;">
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
 
 st.markdown("---")
 st.caption("Desenvolvido por Pedro Fugita | Powered by Streamlit & Python")
