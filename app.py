@@ -6,7 +6,7 @@ from datetime import date
 st.set_page_config(
     page_title="Pedro Fugita - Currículo Profissional",
     page_icon="✈️",
-    layout="wide"
+    layout="wide",
     initial_sidebar_state="expanded"
 )
 
