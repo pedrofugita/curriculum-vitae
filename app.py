@@ -163,7 +163,21 @@ with st.sidebar:
     """, unsafe_allow_html=True)
 
     st.write("---")
-    # st.caption("Download CV (Em breve)")
+
+# ================== DOWNLOAD CV ==================
+    try:
+        with open("Currículo Profissional - Pedro Henrique Fugita Bóis.pdf", "rb") as pdf_file:
+            PDFbyte = pdf_file.read()
+
+        st.download_button(
+            label="⬇️ Baixar Currículo (PDF)",
+            data=PDFbyte,
+            file_name="Currículo Profissional - Pedro Henrique Fugita Bóis.pdf",
+            mime="application/octet-stream",
+            use_container_width=True
+        )
+    except:
+        st.error("Arquivo de currículo não encontrado.")
 
 # ================== ÁREA PRINCIPAL ==================
 st.title("Engenheiro Mecânico & Dados ⚙️💻")
